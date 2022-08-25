@@ -17,7 +17,7 @@
         <img class="m-1 mx-3" src="../assets/logo-spotify.png" alt="spotify logo">
     </header>
     <?php
-    include __DIR__ . '../db.php';
+    include __DIR__ . '/../db.php';
     ?>
     <main>
         <div class="container">
@@ -28,7 +28,7 @@
                     <div class="music-card m-3">
                         <img src="<?php echo $element['poster'] ?>" alt="<?php echo $element['title'] ?>">
                         <h6 class="text-center text-white pt-3"><?php echo $element['title'] ?></h6>
-                        <div class="info-album text-center text-white-50 mb-2"> <?php echo $element['artist'] . '<br>' . $element['year'] ?> </div>
+                        <div class="info-album text-center text-white-50 mb-2"> <?php echo $element['author'] . '<br>' . $element['year'] ?> </div>
                     </div>
                 <?php
                 }
