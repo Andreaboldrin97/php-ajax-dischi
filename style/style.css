@@ -1,0 +1,25 @@
+header{
+    height: 50px;
+    background-color: rgb(48, 58, 69);
+  }
+header img{
+      width: 40px;
+  }
+
+main{
+    height: calc(100vh - 50px);
+    background-color: rgb(33, 45, 58) ;
+    padding-top: 50px;
+  }
+.music-card{
+    background-color: rgb(48, 58, 69);
+    }
+.music-card  img{
+    width: 100%;
+    }
+.music-card h6{
+    text-transform: uppercase;
+    }
+.info-album{
+    font-size: 13px;
+    }
