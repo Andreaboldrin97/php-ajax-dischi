@@ -25,11 +25,13 @@
                 <?php
                 foreach ($music as $element) {
                 ?>
+
                     <div class="music-card m-3">
                         <img src="<?php echo $element['poster'] ?>" alt="<?php echo $element['title'] ?>">
                         <h6 class="text-center text-white pt-3"><?php echo $element['title'] ?></h6>
                         <div class="info-album text-center text-white-50 mb-2"> <?php echo $element['author'] . '<br>' . $element['year'] ?> </div>
                     </div>
+
                 <?php
                 }
                 ?>
