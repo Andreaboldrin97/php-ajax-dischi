@@ -3,21 +3,17 @@ const app = new Vue ({
     data : {
         albums : [],
         selectGenre : '',
-
+        apiUrl : 'http://localhost:8888/ESERCIZI%20PHP/php-ajax-dischi/AXIOS/controller.php',
     },
     methods : {
         getAlbum : function(){
-            let apiUrl = 'http://localhost:8888/ESERCIZI%20PHP/php-ajax-dischi/AXIOS/controller.php'
+            
 
-            if(this.selectGenre != 'genre'){
-              apiUrl += '?'
-            }
-            axios.get(apiUrl)
+            axios.get( this.apiUrl , {params: {query : this.selectGenre}})
             .then((element) => {
                 this.albums= element.data
                 console.log(this.albums)
             })
-           
         }
     },
     created(){
