@@ -16,14 +16,23 @@
     <header>
         <img class="m-1 mx-3" src="../assets/logo-spotify.png" alt="spotify logo">
     </header>
+    <?php
+    include __DIR__ . '../db.php';
+    ?>
     <main>
         <div class="container">
             <div class="row row-cols-6">
-                <div class="music-card m-3">
-                    <img :src="poster" :alt="title">
-                    <h6 class="text-center text-white pt-3">{{ title }}</h6>
-                    <div class="info-album text-center text-white-50 mb-2"> {{ author }} <br> {{ year }} </div>
-                </div>
+                <?php
+                foreach ($music as $element) {
+                ?>
+                    <div class="music-card m-3">
+                        <img src="<?php echo $element['poster'] ?>" alt="<?php echo $element['title'] ?>">
+                        <h6 class="text-center text-white pt-3"><?php echo $element['title'] ?></h6>
+                        <div class="info-album text-center text-white-50 mb-2"> <?php echo $element['artist'] . '<br>' . $element['year'] ?> </div>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
         </div>
     </main>
