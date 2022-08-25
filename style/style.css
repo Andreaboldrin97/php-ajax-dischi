@@ -11,7 +11,12 @@ main{
     background-color: rgb(33, 45, 58) ;
     padding-top: 50px;
   }
+  .card{
+    width: 300px;
+  }
 .music-card{
+    width: 200px;
+    height: 100%;
     background-color: rgb(48, 58, 69);
     }
 .music-card  img{
