@@ -16,13 +16,13 @@
     <header>
         <img class="m-1 mx-3" src="../assets/logo-spotify.png" alt="spotify logo">
     </header>
-    <main>
+    <main id="app">
         <div class="container">
             <div class="row row-cols-6">
-                <div class="music-card m-3">
-                    <img :src="poster" :alt="title">
-                    <h6 class="text-center text-white pt-3">{{ title }}</h6>
-                    <div class="info-album text-center text-white-50 mb-2"> {{ author }} <br> {{ year }} </div>
+                <div class="music-card m-3" v-for="(element , index) in albums" :key="index">
+                    <img :src="element.poster" :alt="element.title">
+                    <h6 class="text-center text-white pt-3">{{ element.title }}</h6>
+                    <div class="info-album text-center text-white-50 mb-2"> {{ element.author }} <br> {{ element.year }} </div>
                 </div>
             </div>
         </div>
