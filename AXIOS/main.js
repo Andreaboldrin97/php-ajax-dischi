@@ -9,7 +9,7 @@ const app = new Vue ({
         getAlbum : function(){
             
 
-            axios.get( this.apiUrl , {params: {query : this.selectGenre}})
+            axios.get( this.apiUrl , {params: {genre : this.selectGenre}})
             .then((element) => {
                 this.albums= element.data
                 console.log(this.albums)

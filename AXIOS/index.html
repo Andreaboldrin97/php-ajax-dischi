@@ -16,17 +16,13 @@
     <div id="app">
         <header class="d-flex justify-content-between">
             <img class="m-1 mx-3" src="../assets/logo-spotify.png" alt="spotify logo">
-            <div>
-                <select v-model="selectGenre">
-                    <option value="">All</option>
-                    <option value="Rock">Rock</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Jazz">Jazz</option>
-                    <option value="Metal">Metal</option>
-                </select>
-                 <input type="submit" @click="getAlbum ()">
-            </div>
-          
+            <select class="m-1 mx-3" v-model="selectGenre" @change="getAlbum()">
+                <option value="">All genre</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
+            </select>
         </header>
         <main>
             <div class="container">
